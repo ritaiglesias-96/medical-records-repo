@@ -104,11 +104,6 @@ const MedicalRecords: React.FC = () => {
   return (
     <div className='bg-gray-100 min-h-screen p-6 relative'>
       <Toaster position='top-right' reverseOrder={false} />
-
-      <div className='flex justify-between items-center mb-6'>
-        <h1 className='text-2xl font-bold text-gray-800'>Medical Records</h1>
-      </div>
-
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
         {patients.map((patient) => (
           <PatientCard
@@ -124,10 +119,10 @@ const MedicalRecords: React.FC = () => {
 
       <button
         onClick={() => handleOpenModal('add')}
-        className='fixed bottom-6 right-6 bg-Amethyst hover:bg-blue-700 text-white p-6 rounded-full shadow-lg transition-transform duration-200 hover:scale-110 focus:outline-none'
+        className='fixed bottom-6 right-6 bg-Amethyst h-20 flex items-center justify-center hover:bg-blue-700 text-white p-6 rounded-full shadow-lg transition-transform duration-200 hover:scale-110 focus:outline-none'
         title='Add New Patient'
       >
-        <span className='text-3xl px-6'>+</span>
+        <span className='text-3xl'>+</span>
       </button>
 
       {modalType && (
